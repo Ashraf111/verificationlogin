@@ -1,0 +1,30 @@
+<?php
+
+/*Define constant to connect to database */
+DEFINE('DATABASE_USER', 'yourdbusername');
+DEFINE('DATABASE_PASSWORD','yourdbpassword');
+DEFINE('DATABASE_HOST', 'yourdbhostname');
+DEFINE('DATABASE_NAME', 'yourdbname');
+/*Default time zone ,to be able to send mail */
+date_default_timezone_set('UTC');
+
+/*You might not need this */
+
+
+
+//This is the address that will appear coming from ( Sender )
+define('EMAIL', 'ashrafuddin2me@yahoo.com');
+
+/*Define the root url where the script will be found such as http://website.com or http://website.com/Folder/ */
+DEFINE('WEBSITE_URL', 'http://ashrafcste1.site88.net');
+
+
+// Make the connection:
+$dbc = @mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD,
+    DATABASE_NAME);
+
+if (!$dbc) {
+    trigger_error('Could not connect to MySQL: ' . mysqli_connect_error());
+}
+
+?>
